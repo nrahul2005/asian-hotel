@@ -8,9 +8,7 @@
     <style>
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 </style>
-    <!-- <style>
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
-</style> -->
+    
 </head>
 <body>
 
@@ -21,7 +19,7 @@
 
                         <div class="two">
                             <ul>
-                                <li><a href="https://demo.templatesjungle.com/interio/index.html">HOME </a></li>
+                                <li>HOME</li>
                                 <li>PAGE</li>
                                 <li>ABOUT</li>
                                 <li>BLOCK</li>
@@ -76,7 +74,6 @@
             </div>
            
             </div><br><br>
-<!-- stop -->
 
            
             <div class="ft">
@@ -138,7 +135,7 @@
             
 
         </div>
-        <!-- start -->
+      
 
         <div class="clint">
 
@@ -149,7 +146,7 @@
             <p>What my clients says</p>
         </div>
 
-<!-- start -->
+
 
         <div class="nothing">
 
@@ -213,8 +210,6 @@
           </p> 
           <button class="nn"> CONTECT  ME </button>
              </div> <br><br>
-<!-- CONTECT-->
-
 
             <div class="contect">
              
@@ -223,41 +218,35 @@
                     
 <h2 style="text-align: center;">USER REGISTRATION</h2>
 
-    <form id="myform">
+            <form id="myform">
 
-        <div class="none">
-        <label for="name"><h5>Name</h5></label>
-        <input type="text" id="Name" placeholder="Enter your name">
-        </div>
-        <br><br>
+                <div class="none">
+                <label for="name"><h5>Name</h5></label>
+                <input type="text" id="Name" placeholder="Enter your name">
+                </div>
+                <br><br>
 
-        <div class="ntwo">
-         <label for="email"><h5>Email</h5></label>
-        <input type="email" id="Email" placeholder="Enter your email">
-        </div>
-        <br><br>
+                <div class="ntwo">
+                <label for="email"><h5>Email</h5></label>
+                <input type="email" id="Email" placeholder="Enter your email">
+                </div>
+                <br><br>
 
-        <div class="nthree">
-         <label for="password"><h5>Password</h5> </label>
-        <input type="password" id="password" placeholder="Enter password">
-        </div>
-        <br><br>
+                <div class="nthree">
+                <label for="password"><h5>Password</h5> </label>
+                <input type="password" id="password" placeholder="Enter password">
+                </div>
+                <br><br>
 
-        <div class="nfour">
-        <label for="password"><h5>forget Password </h5></label>
-        <input type="password" id="forget password" placeholder="Enter password">
-        </div>
-        <br><br>
+                <div class="nfour">
+                <label for="password"><h5>curent Password </h5></label>
+                <input type="password" id="curent password" placeholder="Enter password">
+                </div>
+                <br><br>
 
-        <button type="submit">Submit</button>
-<!-- 
-        <p id="failed" style="color: red;">
-        </p>
+                <button type="submit">Submit</button>
 
-        <p id="success" style="color: green;">
-        </p>
-         -->
-    </form>
+            </form>
                 </div>
 
             </div> 
@@ -306,7 +295,43 @@
          <hr> <br><br>
          <div class="fin">© 2025 All rights reserved. HTML Template by: TemplatesJungle.</div>
 
-         <!-- <script src="script.js">  -->
-<!-- </script> -->
+
+     <script>
+    document.getElementById("myform").addEventListener("submit", function(event) {
+        event.preventDefault(); // Prevent actual form submission
+
+        // Get form values
+        let name = document.getElementById("Name").value.trim();
+        let email = document.getElementById("Email").value.trim();
+        let password = document.getElementById("password").value.trim();
+        let currentPassword = document.getElementById("curent password").value.trim(); // your ID uses a space
+
+        // Basic validation
+        if (!name || !email || !password || !currentPassword) {
+            alert("All fields are required.");
+            return;
+        }
+
+        // Email format check using regex
+        let emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+        if (!email.match(emailPattern)) {
+            alert("Please enter a valid email address.");
+            return;
+        }
+
+        // Check if password and current password are the same
+        if (password === currentPassword) {
+            alert("New password should not be the same as current password.");
+            return;
+        }
+
+        // If all validations pass
+        alert("Form submitted successfully!");
+        // Optionally: reset the form
+        // document.getElementById("myform").reset();
+    });
+</script>
+    
+    
 </body>
 </html>

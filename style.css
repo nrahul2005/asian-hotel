@@ -362,95 +362,126 @@
     height: 60px;
 }
 
-@media (max-width:960px) {
-   /* Base styles (Mobile-first approach) */
-body {
-  margin: 0;
-  font-family: 'Montserrat', sans-serif;
-}
+@media screen and (max-width: 600px) {
+    /* Adjustments for the header */
+    .head {
+        height: 70px; /* Shorten the header for mobile */
+        flex-direction: column;
+        align-items: center;
+    }
 
-.head {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 20px;
-}
+    .one {
+        font-size: 18px;
+        padding-left: 0%;
+    }
 
-.head .two ul {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  list-style: none;
-  padding: 0;
-}
+    .two ul li {
+        margin: 5% 5px;
+        font-size: 10px;
+    }
 
-.ft, .ft1 {
-  display: flex;
-  flex-direction: column;
-  padding: 20px;
-  gap: 20px;
-}
+    /* Adjust footer for mobile */
+    .ft {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        font-size: 10px;
+    }
 
-.imag {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 20px;
-}
+    .to {
+        flex-direction: column;
+         align-items: center;
+        justify-content: center;
+    }
 
-/* Responsive Styles */
+    .box1{
+        margin-top: 10%;
+    }
 
-/* Tablets (≥ 768px) */
-@media (min-width: 768px) {
-  .head {
-    flex-direction: row;
-    justify-content: space-between;
-  }
+    .ft .left .ft .right {
+        width: 100%; /* Full width on mobile */
+        margin-bottom: 20px;
+    }
 
-  .head .two ul {
-    flex-direction: row;
-    gap: 20px;
-  }
+    /* For the "imag" section, adjusting layout for mobile screens */
+    .imag {
+        flex-direction: column;
+        align-items: center;
+    }
 
-  .ft, .ft1 {
-    flex-direction: row;
-    align-items: center;
-  }
+    .imag .ima1 {
+        width: 80%; /* Make images take more space on small screens */
+        margin-bottom: 20px;
+    }
 
-  .imag {
-    grid-template-columns: repeat(2, 1fr);
-  }
+    .top {
+        /* height: 50vh; */
+        text-align: center;
+    
+    }
 
-  .home-head {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 40px;
-  }
-}
+    /* Adjust buttons and text fields for mobile */
+    .box input .box button {
+        width: 80%;
+    }
 
-/* Laptops/Desktop (≥ 1024px) */
-@media (min-width: 1024px) {
-  .imag {
-    grid-template-columns: repeat(3, 1fr);
-  }
+    /* Adjust home-head layout for small screens */
+    .home-head {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 5%;
+        height: auto;
+    }
 
-  .home-head {
-    grid-template-columns: repeat(4, 1fr);
-  }
+    .home-head .left, .home-head .right {
+        width: 100%;
+        margin-bottom: 15px;
+    }
 
-  .to {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 20px;
-  }
+    .home-head .left2 .home-head .right2 {
+        display: none; /* Hide the middle columns */
+    }
 
-  .ima1 {
-    width: calc(33.33% - 20px);
-  }
+    /* For footer sections */
+    .nothing {
+        font-size: 24px;
+        padding-left: 20%;
+        text-align: center;
+        margin-bottom: 10px;
+    }
 
-  .ft, .ft1 {
-    padding: 50px;
-  }
-}
+    .nothing{
+         font-size: 10px;
+    }
 
+    .clint h1 {
+        font-size: 40px;
+    }
+
+    /* Adjustments to other sections as needed */
+    .col {
+        font-size: 18px;
+    }
+    .top h1 {
+        font-size: 19px;
+        padding-left: 10px;
+    }
+    .contect{
+        width: 100%;
+        margin-top: 10%;
+        
+    }
+    .box h2{
+        font-size: 10px;
+    }
+    .box input{
+        font-size: 10px;
+        border: none;
+        padding-right: 10%;
+    
+    }
+    /* Ensure buttons are appropriately sized */
+    .box button {
+        padding: 10px 20px;
+    }
 }
